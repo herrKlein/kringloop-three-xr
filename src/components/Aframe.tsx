@@ -1,5 +1,5 @@
 import 'aframe';
-import 'types-aframe-react';
+import 'types-aframe-react'; // https://github.com/aframevr/aframe/issues/4826#issuecomment-1566150266
 
 const AframeScene = () => {
   return (

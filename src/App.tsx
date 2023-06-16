@@ -19,21 +19,11 @@ function CylinderButton(props: any) {
       onSelect={onSelect}
     >
       <group>
-        <mesh position={[0, 0.05, 0]} castShadow receiveShadow>
-          <cylinderBufferGeometry args={[0.1, 0.1, 0.1, 32]} />
+        <mesh position={[0, 0.1, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+          <cylinderBufferGeometry args={[0.1, 0.1, 0.3, 32]} />
           <meshPhongMaterial color={color} />
         </mesh>
-        <Suspense fallback={null}>
-          <Text
-            position={[0, 0, 0.12]}
-            fontSize={0.05}
-            color="#000"
-            anchorX="center"
-            anchorY="middle"
-          >
-            Hello react-xr!
-          </Text>
-        </Suspense>
+
         {hover && (
           <Shadow
             opacity={0.3}
